@@ -14,7 +14,10 @@ const YT_API_KEY= process.env.YT_API_KEY;
 const BOT_ID=process.env.BOT_ID;
 const BOT_SECRET = process.env.BOT_SECRET;
 
+
 var channel_id=config.channel_id;
+
+const TIEMPO = config.tiempo;
 
 
 
@@ -39,7 +42,7 @@ client.on('message', msg => {
 
     if(msg.content.startsWith('Kat32 setChannel')){
         msg.reply("si");
-        let splited = msg.content.split("Kat32 setChannel ")
+        let splited = msg.content.split("Kat32 setChannel")
         if(splited.length === 2){
             let channel_id_for_set = splited[1];
             config.channel_id=channel_id_for_set;
@@ -125,8 +128,8 @@ async function getDataFromYT(id){
 }
 
 function checkDuration(msg,duration){
-    if (duration > 40 ){
-        msg.reply("El video que mandaste dura mas de 40 segundos, busca uno mas corto 😕 ")
+    if (duration > TIEMPO ){
+        msg.reply("El video que mandaste dura mas de "+TIEMPO+" segundos, busca uno mas corto 😕 ")
         msg.delete();
     }
     else{
