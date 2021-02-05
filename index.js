@@ -15,9 +15,9 @@ const BOT_ID=process.env.BOT_ID;
 const BOT_SECRET = process.env.BOT_SECRET;
 
 
-var channel_id=config.channel_id;
+var channel_id=process.env.CHANNEL_ID;
 
-const TIEMPO = config.tiempo;
+const TIEMPO = process.env.TIEMPO;
 
 
 
