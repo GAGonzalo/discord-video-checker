@@ -34,7 +34,7 @@ client.on('message', msg => {
    /* if(msg.member.id !== BOT_ID && msg.channel_id !== channel_id){
         console.log(`Mensaje en server: ${msg.guild.name} /  Mensaje: ${msg.content}`);
     }*/
-    
+
 
 
    if(msg.channel.id===channel_id && msg.content==='Kat32 ping'){
@@ -69,7 +69,7 @@ function hazmeReirChannelMsg(msg){
                 checkDuration(msg,duration);
                 
             }).catch(error=>{
-                msg.reply("Solo se pueden enviar VIDEOS por link de youtube o subidos y con duracion de 40 segundos o menos! 🤙🏼 ")
+                msg.reply("Solo se pueden enviar VIDEOS por link de youtube o subidos y con duracion de "+TIEMPO+" segundos o menos! 🤙🏼 ")
                 msg.delete();
             });
         }
@@ -84,7 +84,7 @@ function hazmeReirChannelMsg(msg){
                 })
             }
             else{
-                msg.reply("Tenés que enviar el link de youtube o subirlo al canal, de forma correcta y con duracion menor a 40 segundos 🤙🏼")
+                msg.reply("Tenés que enviar el link de youtube o subirlo al canal, de forma correcta y con duracion menor a "+TIEMPO+" segundos 🤙🏼")
                 msg.delete();
             }
             
