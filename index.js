@@ -31,9 +31,10 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 
-    if(msg.member.id !== BOT_ID && msg.channel_id !== channel_id){
+   /* if(msg.member.id !== BOT_ID && msg.channel_id !== channel_id){
         console.log(`Mensaje en server: ${msg.guild.name} /  Mensaje: ${msg.content}`);
-    }
+    }*/
+    
 
 
    if(msg.channel.id===channel_id && msg.content==='Kat32 ping'){
